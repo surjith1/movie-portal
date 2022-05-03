@@ -9,9 +9,9 @@
   width: 340px;
 }
 .movie-poster {
-  height: 640px;
+  height: 550px;
   width: 340px;
-  object-fit: cover;
+  object-fit: fill;
 }
 .movie-specs {
   display: flex;
@@ -260,4 +260,23 @@
   right: 0px;
   transform: scale(1) translate(50%, -50%);
   transform-origin: 100% 0%;
+} 
+
+ul.top-navbar-fixed {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  background: #000;
+  height: 50px;
+  align-items: center;
+}
+.top-navbar-fixed li a {
+text-decoration: none;
+color: #fff;
+}
+.dis-block {
+  display: block;
+}
+.dis-none {
+  display: none;
 }

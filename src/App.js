@@ -1,6 +1,11 @@
 import './App.css';
 import MovieName from './component/MovieName';
-import {BrowserRouter} from 'react-router-dom';
+import TopNavbar from './component/TopNavbar';
+import Home from './component/Home';
+import ColorGames from './component/ColorGames';
+import AddMovies from './component/AddMovies';
+import Mode from './component/Mode';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   let data = [
     {
@@ -36,15 +41,18 @@ function App() {
     ];
   return <>
   <BrowserRouter>
-    <div className='movie-list'>
-  
-  {  data.map((e) => {
-    return <>
-        <MovieName url={e.url} titleName={e.titleName} rating={e.rating} description={e.description} videoUrl={e.videoUrl} />
-      </>
-  })
-  }
-    </div>
+  <div className='top-sec'>
+  <TopNavbar />
+  </div>
+  <div className='main-content'>
+  <Routes>
+  <Route path="*" element={<Home />}></Route>
+  <Route path="/movies" element={<MovieName data={data} />}></Route>
+  <Route path="/color-games" element={<ColorGames />}></Route>
+  <Route path="add-movies" element={<AddMovies />}></Route>
+  <Route path="/mode" element={<Mode />}></Route>
+  </Routes>
+  </div>
     </BrowserRouter>
   </>
 }
