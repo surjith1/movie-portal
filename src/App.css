@@ -280,3 +280,36 @@ color: #fff;
 .dis-none {
   display: none;
 }
+.add-color {
+  margin: 20px;
+}
+.btn-w-ctrl {
+  display: flex;
+  gap:15px;
+}
+button {
+  cursor: pointer;
+}
+
+
+.form-group {
+  position: relative;
+}
+.form-group label {
+  position: absolute;
+    left: 10px;
+    bottom: 3px;
+}
+.form-group input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #06c;
+}
+.form-group input:focus {
+  border: none;
+}
+.form-group input:hover + label {
+  top:3px;
+  /* transition: top 0.5s 2s ease-out */
+}

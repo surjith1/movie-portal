@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AddMovies from './AddMovies';
 
 const MovieName = (props) => {
   const [like, setLike] = useState(0);
@@ -7,7 +8,7 @@ const MovieName = (props) => {
   const [toggle, setToggle] = useState();
   let navigate = useNavigate();
   const styles= {
-    color:"red"
+    color:"green",
   }
   return <>
     <div className="movie-list">
