@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const Mode = () => {
+  const [mode, setMode]=useState("light");
+  const styles = {
+    background:mode==="light" ? "black" : "white",
+  }
   return (
-    <div>Mode</div>
+  <h1>Welcome to Mode</h1>
+  
   )
 }
 

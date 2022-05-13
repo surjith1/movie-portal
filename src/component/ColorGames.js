@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
 
@@ -15,7 +16,7 @@ const ColorGames = () => {
     <div className='add-color'>
     <div className='btn-w-ctrl'>
       <input style={styles} type="text" placeholder='Enter the Color' onChange={(event) => setColor(event.target.value)} value={color} />
-      <button onClick={()=>setColorList([...colorList,color])}> Add Color </button>
+      <Button variant='outlined' onClick={()=>setColorList([...colorList,color])} color="primary"> Add Color</Button>
       </div>
       {
         colorList.map((clr) => {
